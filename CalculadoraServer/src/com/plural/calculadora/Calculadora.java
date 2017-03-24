@@ -12,10 +12,10 @@ public class Calculadora {
 	 * @operacao = algo do tipo "50.2 + 12"
 	 * 
 	 */
-	public String calcular(String expressao) {
+	public static String calcular(String expressao) {
 		double res, valor1, valor2;
 
-		//TODO this should have a better way...
+		//TODO should have a better way to do this!
 		if (expressao.contains("+")) {
 			String[] valores = expressao.split("\\+");
 			valor1 = Double.parseDouble(valores[0]);

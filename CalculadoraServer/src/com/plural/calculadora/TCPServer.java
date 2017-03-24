@@ -15,7 +15,6 @@ public class TCPServer {
 		ServerSocket socketTCP = new ServerSocket(port);
 		System.out.println("... Ok.");
 
-		Calculadora calc=new Calculadora();
 		while (true) {
 			Socket connectionSocket = socketTCP.accept();
 			BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
@@ -24,7 +23,7 @@ public class TCPServer {
 			clientSentence = inFromClient.readLine();
 			System.out.println("Recebido: " + clientSentence);
 			
-			clientSentence = calc.calcular(clientSentence);			
+			clientSentence = Calculadora.calcular(clientSentence);			
 			System.out.println("Resultado: " + clientSentence);
 			
 			capitalizedSentence = clientSentence.toUpperCase() + '\n';
