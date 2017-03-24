@@ -18,7 +18,7 @@ public class TCPClient {
 			port = Integer.parseInt(argv[1]);
 		}
 
-		System.out.println(String.format("Conecntando em: %s:%d", host, port));
+		System.out.println(String.format("Conectando em: %s:%d", host, port));
 
 		Socket clientSocket = new Socket(host, port);
 		DataOutputStream server = new DataOutputStream(
